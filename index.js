@@ -58,7 +58,7 @@ function playGame(){
     else if(humanScore < computerScore){
         console.log(`you lost the game! Best of LUCK! try again`)
         console.log(`your score ${humanScore}`);
-        console.log(`your score ${computerScore}`);
+        console.log(`computer score ${computerScore}`);
     }
     else{
         console.log(`Error occured! try again`);
