@@ -1,4 +1,5 @@
-alert(`To start the game type playGame() and hit enter in the console`);
+alert(To play the hit ctrl + shift + j);
+console.log(`To start the game type playGame() and hit enter`);
 function getComputerChoice(){
     let computer;
     computer = Math.floor(Math.random()*3);
@@ -16,7 +17,7 @@ function getComputerChoice(){
 function getHumanChoice(){
     let human;
     human = prompt("rock paper scissors");
-    return human;
+    return human.toLowerCase();
 }
 
 let humanScore = 0;
@@ -40,17 +41,24 @@ function playRound(humanChoice,computerChoice){
 }
 
 function playGame(){
-    for(let i = 0; i < 5; i++){
+    let rounds = +prompt(`Enter number 0f rounds(Odd number only)`);
+    for(let i = 0; i < rounds; i++){
         playRound(getHumanChoice(),getComputerChoice())
     }
     if(humanScore == computerScore){
         console.log(`Both are draw`);
+        console.log(`your score ${humanScore}`);
+        console.log(`your score ${computerScore}`);
     }
     else if(humanScore > computerScore){
-        console.log(`you won the game! by (${humanScore - computerScore}) points`);
+        console.log(`you won the game! by ${humanScore - computerScore} points`);
+        console.log(`your score ${humanScore}`);
+        console.log(`your score ${computerScore}`);
     }
     else if(humanScore < computerScore){
-        console.log(`you lost the game! Best of LUCK! try again`);
+        console.log(`you lost the game! Best of LUCK! try again`)
+        console.log(`your score ${humanScore}`);
+        console.log(`your score ${computerScore}`);
     }
     else{
         console.log(`Error occured! try again`);
