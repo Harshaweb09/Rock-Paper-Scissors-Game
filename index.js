@@ -1,3 +1,4 @@
+alert(`To start the game type playGame() and hit enter in the console`);
 function getComputerChoice(){
     let computer;
     computer = Math.floor(Math.random()*3);
