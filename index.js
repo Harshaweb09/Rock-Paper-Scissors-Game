@@ -16,3 +16,5 @@ function getHumanChoice(){
     human = prompt("rock paper scissors");
     return human;
 }
+let humanScore = 0;
+let computerScore = 0;
