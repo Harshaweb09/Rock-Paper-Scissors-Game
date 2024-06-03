@@ -1,4 +1,4 @@
-alert(To play the hit ctrl + shift + j);
+alert("To play hit ctrl + shift + j");
 console.log(`To start the game type playGame() and hit enter`);
 function getComputerChoice(){
     let computer;
