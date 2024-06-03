@@ -23,7 +23,7 @@ let computerScore = 0;
 
 function playRound(humanChoice,computerChoice){
     if (humanChoice === computerChoice){
-        console.log('"Both are draw"');
+        console.log('Same choice by both of u');
     }
     else if ((humanChoice == "rock" && computerChoice == "scissors") || (humanChoice == "paper" && computerChoice == "rock") || (humanChoice == "scissors" && computerChoice == "paper")){
         console.log(`You won! ${humanChoice} beats ${computerChoice}`);
@@ -35,5 +35,23 @@ function playRound(humanChoice,computerChoice){
     }
     else{
         console.log("Error occured! try again");
+    }
+}
+
+function playGame(){
+    for(let i = 0; i < 5; i++){
+        playRound(getHumanChoice(),getComputerChoice())
+    }
+    if(humanScore == computerScore){
+        console.log(`Both are draw`);
+    }
+    else if(humanScore > computerScore){
+        console.log(`you won the game! by (${humanScore - computerScore}) points`);
+    }
+    else if(humanScore < computerScore){
+        console.log(`you lost the game! Best of LUCK! try again`);
+    }
+    else{
+        console.log(`Error occured! try again`);
     }
 }
